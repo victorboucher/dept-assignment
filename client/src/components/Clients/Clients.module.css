@@ -16,6 +16,11 @@
 .logo {
   width: 16em;
   height: 8em;
+  transition: opacity 150ms ease-in-out;
+}
+
+.logo:hover {
+  opacity: .5;
 }
 
 .title {
