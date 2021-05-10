@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 54em) {
   .title {
     font-size: 25em;
     text-align: left;
