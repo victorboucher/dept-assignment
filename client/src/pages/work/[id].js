@@ -1,13 +1,21 @@
 import Head from 'next/head'
-import { Header } from 'components'
+import styles from './Work.module.css'
 
-const WorkDetail = ({ work }) => {
+const WorkDetail = ({ client, title, slug }) => {
   return (
     <>
       <Head>
-        <title>Dept | {work.client}</title>
+        <title>Dept | {client}</title>
       </Head>
-      <p>{work.client}</p>
+      <div className={styles.detailContainer}>
+        <h1>{client}</h1>
+        <h2>{title}</h2>
+        <img 
+          className={styles.image} 
+          src={`https://dept-assignment-victor.herokuapp.com/images/${slug}.png`} 
+          alt={client}
+        />
+      </div>
     </>
   )
 }
@@ -37,7 +45,7 @@ export const getStaticProps = async ({ params: { id } }) => {
   }
 
   return {
-    props: { work }
+    props: { ...work }
   }
 }
 

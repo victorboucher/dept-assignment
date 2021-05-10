@@ -41,7 +41,7 @@ const Work = ({ works, clients }) => {
         {filteredWorks.map((work, index) => <CaseCard 
           {...work} 
           listView={listView} 
-          key={index} 
+          key={index}
         />)}
       </div>
       <Clients clients={clients} />

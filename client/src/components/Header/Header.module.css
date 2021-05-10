@@ -2,14 +2,16 @@
   max-width: 90em;
   height: 30em;
   margin: 0 auto;
+  padding: 0 1.25em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+  background-origin: content-box;
 }
 
 .container {
   max-width: 75em;
-  padding-top: 5em;
+  padding: 5em 1.25em 0;
   margin: 0 auto;
 }
 

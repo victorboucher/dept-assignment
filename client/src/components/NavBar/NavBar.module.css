@@ -1,0 +1,64 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+.logo {
+  width: 5em;
+}
+
+.container {
+  padding: 0 1.25em;
+  max-width: 75em;
+  height: 6em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: auto;
+}
+
+@media (max-width: 75em) {
+  .activeNav .button {
+    margin-right: 1em;
+  }
+}
+
+.button span {
+  display: block;
+  height: .25em;
+  width: 2em;
+  background: #272727;
+  transition: transform 250ms;
+}
+
+.button span:nth-of-type(1) {
+  margin-bottom: .8em;
+}
+
+.activeNav .button span:nth-of-type(1) {
+  background: white;
+  -webkit-transform: rotate(-45deg) translate(-.25em, .5em);
+  transform: rotate(-45deg) translate(-.25em, .5em);
+}
+
+.activeNav .button span:nth-of-type(2) {
+  background: white;
+  -webkit-transform: rotate(45deg) translate(-.25em, -.5em);
+  transform: rotate(45deg) translate(-.25em, -.5em);
+}
+
+.activeNav {
+  background: none;
+}
+
+.activeNav .logo {
+  display: none;
+}

@@ -16,3 +16,20 @@
   justify-content: space-between;
   gap: 2em;
 }
+
+.detailContainer {
+  max-width: 77.5em;
+  padding: 10em 1.25em 60vh;
+  margin: 0 auto;
+}
+
+.detailContainer h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.detailContainer img {
+  max-width: 24em;
+  width: 100%;
+  margin-top: 4em;
+}

@@ -40,6 +40,14 @@
   display: block;
 }
 
+.icons a:focus {
+  outline: none;
+}
+
+.icons a:focus img {
+  outline: 4px solid blue;
+}
+
 .icons img {
   display: block;
   height: 2em;
