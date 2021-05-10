@@ -1,45 +1,62 @@
-import { useState } from 'react'
-import { Header, Navigation, CaseCard, Clients, Footer } from 'components'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { Header, CaseCard, Clients } from 'components'
 import styles from './Work.module.css'
 
-const Work = ({ work }) => {
-  const [filter, setFilter] = useState(null)
-  console.log(work)
+const Work = ({ works }) => {
+  const router = useRouter()
+  const filter = router.query.filter
+  const [filteredWorks, setFilteredWorks] = useState(works)
+  const categories = [...new Set(works.map(work => work.category))]
+
+  useEffect(() => {
+    if (!filter || filter === 'all') return setFilteredWorks(works)
+    setFilteredWorks(works.filter(work => work.category === filter))
+  }, [filter])
 
   return (
     <>
-      <Navigation />
-      <Header />
+      <Header 
+        title='Work'
+        image='/images/header.png'
+      />
       <div className={styles.container}>
         <label className={styles.label}>
           Show me
-          <select>
-            <option>all work</option>
-            <option>..</option>
+          <select 
+            onChange={(e) => router.push({
+              pathname: '/work',
+              query: { filter: e.target.value }
+            })}
+            value={filter && filter}
+          >
+            <option value='all'>all work</option>
+            {categories.map((category, index) => (
+              <option key={index}>{category}</option>
+            ))}
           </select>
         </label>
         <div className={styles.workContainer}>
-          {work.map((work, index) => <CaseCard data={work} key={index} />)}
+          {filteredWorks.map((work, index) => <CaseCard data={work} key={index} />)}
         </div>
       </div>
       <Clients />
-      <Footer />
     </>
   )
 }
 
 export const getStaticProps = async () => {
   const data = await fetch('http://localhost:3001/work')
-  const work = await data.json()
+  const works = await data.json()
 
-  if (!work) {
+  if (!works) {
     return {
       notFound: true
     }
   }
 
   return {
-    props: { work }
+    props: { works }
   }
 }
 

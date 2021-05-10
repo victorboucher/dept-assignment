@@ -2,11 +2,9 @@
   max-width: 90em;
   height: 60em;
   margin: 0 auto;
-  background-image: url('/images/header.png');
   background-position: 0 10%;
   background-repeat: no-repeat;
   background-size: 170%;
-  background-origin: content-box;
 }
 
 .container {
@@ -18,4 +16,6 @@
 .title {
   font-weight: 400;
   font-size: 25em;
+  color: #0E0E0E;
+  text-transform: uppercase;
 }
