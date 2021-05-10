@@ -13,7 +13,7 @@ const WorkDetail = ({ work }) => {
 }
 
 export const getStaticPaths = async () => {
-  const data = await fetch('http://localhost:3001/work/')
+  const data = await fetch('https://dept-assignment-victor.herokuapp.com/work/')
   const work = await data.json()
 
   const paths = work.map(test => ({
@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { id } }) => {
-  const data = await fetch(`http://localhost:3001/work/${id}`)
+  const data = await fetch(`https://dept-assignment-victor.herokuapp.com/work/${id}`)
   const work = await data.json()
 
   if (!work) {

@@ -8,7 +8,7 @@ const Clients = ({ clients }) => (
       {clients.map((client, index) => (
         <img 
           className={styles.logo} 
-          src={`http://localhost:3001/images/clients/${client}.png`} 
+          src={`https://dept-assignment-victor.herokuapp.com/images/clients/${client}.png`} 
           alt={client}
           key={index}
         />

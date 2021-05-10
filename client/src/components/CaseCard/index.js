@@ -6,7 +6,7 @@ const CaseCard = ({ slug, client, title, listView }) => (
     <a className={`${styles.card} ${listView && styles.listView}`}>
       <img 
         className={styles.image} 
-        src={`http://localhost:3001/images/${slug}.png`} 
+        src={`https://dept-assignment-victor.herokuapp.com/images/${slug}.png`} 
         alt={client}
       />
       <div>

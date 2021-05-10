@@ -50,10 +50,10 @@ const Work = ({ works, clients }) => {
 }
 
 export const getStaticProps = async () => {
-  const workRes = await fetch('http://localhost:3001/work')
+  const workRes = await fetch('https://dept-assignment-victor.herokuapp.com/work')
   const works = await workRes.json()
 
-  const clientsRes = await fetch('http://localhost:3001/clients')
+  const clientsRes = await fetch('https://dept-assignment-victor.herokuapp.com/clients')
   const clients = await clientsRes.json()
 
   if (!works || !clients) {

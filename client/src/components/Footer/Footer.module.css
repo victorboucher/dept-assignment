@@ -1,3 +1,39 @@
 .footer {
   background: #0E0E0E;
+  padding: 8em 0;
+}
+
+.container {
+  max-width: 77.5em;
+  padding: 0 1.25em;
+  margin: 0 auto;
+  display: flex;
+}
+
+.logo {
+  width: 6.25em;
+  height: 1.7em;
+}
+
+.link {
+  color: white;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-right: 1em;
+}
+
+.linkContainer {
+  margin-left: 6em;
+}
+
+.info {
+  margin-top: 4em;
+}
+
+.info p {
+  display: inline-block;
+  font-family: maison neue, helvetica neue, arial, sans-serif;
+  font-size: .75em;
+  color: #808080;
+  margin-right: 1.5em;
 }
