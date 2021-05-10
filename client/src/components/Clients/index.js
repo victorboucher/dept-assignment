@@ -9,6 +9,7 @@ const Clients = ({ clients }) => (
         <img 
           className={styles.logo} 
           src={`http://localhost:3001/images/clients/${client}.png`} 
+          alt={client}
           key={index}
         />
       ))}

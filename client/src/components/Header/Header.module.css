@@ -1,10 +1,10 @@
 .header {
   max-width: 90em;
-  height: 60em;
+  height: 30em;
   margin: 0 auto;
-  background-position: 0 10%;
   background-repeat: no-repeat;
-  background-size: 170%;
+  background-size: cover;
+  background-position: left;
 }
 
 .container {
@@ -15,7 +15,21 @@
 
 .title {
   font-weight: 400;
-  font-size: 25em;
+  font-size: 10em;
   color: #0E0E0E;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 860px) {
+  .title {
+    font-size: 25em;
+    text-align: left;
+  }
+
+  .header {
+    height: 60em;
+    background-size: 170%;
+    background-position: 0 10%;
+  }
 }

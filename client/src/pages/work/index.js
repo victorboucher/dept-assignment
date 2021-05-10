@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { Header, CaseCard, Clients, Filter } from 'components'
 import styles from './Work.module.css'
+import ToggleView from 'components/ToggleView'
 
 const Work = ({ works, clients }) => {
   const router = useRouter()
@@ -26,19 +27,22 @@ const Work = ({ works, clients }) => {
         image='/images/header.png'
       />
       <div className={styles.container}>
-        <button 
-          onClick={() => setListView(prevState => !prevState)}
-        >
-          {listView ? 'Grid view' : 'List View'}
-        </button>
+        <ToggleView 
+          listView={listView}
+          setListView={setListView}
+        />
         <Filter 
           filter={filter}
           router={router}
           categories={categories}
         />
-        <div className={styles.workContainer}>
-          {filteredWorks.map((work, index) => <CaseCard {...work} listView={listView} key={index} />)}
-        </div>
+      </div>
+      <div className={styles.workContainer}>
+        {filteredWorks.map((work, index) => <CaseCard 
+          {...work} 
+          listView={listView} 
+          key={index} 
+        />)}
       </div>
       <Clients clients={clients} />
     </>

@@ -3,10 +3,14 @@
   padding: 0 1.25em;
   margin: 0 auto;  
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .workContainer {
+  max-width: 77.5em;
+  padding: 0 1.25em;
+  margin: 0 auto;  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

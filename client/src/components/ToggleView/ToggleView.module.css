@@ -1,0 +1,14 @@
+.button {
+  all: unset;
+  font-size: 2em;
+  margin: 1em 0;
+  height: 2.3rem;
+  cursor: pointer;
+  background: white;
+  border-bottom: 1px solid black;
+}
+
+.button:hover, .button:focus {
+  color: #1A18F7;
+  border-bottom: 1px solid #1A18F7;
+}
