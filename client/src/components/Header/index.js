@@ -1,6 +1,12 @@
+import styles from './Header.module.css'
+
 const Header = () => {
   return (
-    <p>header</p>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>WORK</h1>
+      </div>
+    </header>
   )
 }
 

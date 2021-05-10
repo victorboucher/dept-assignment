@@ -1,0 +1,29 @@
+.container {
+  background: #F3F6F6;
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 64em;
+  margin: 4em auto 0;
+  justify-content: center;
+}
+
+.logo {
+  width: 16em;
+  height: 8em;
+}
+
+.title {
+  font-size: 4em;
+  font-weight: 400;
+}
+
+.text {
+  max-width: 35em;
+  margin: 0 auto;
+  font-family: maison neue, helvetica neue, arial, sans-serif;
+}

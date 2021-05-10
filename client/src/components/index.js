@@ -1,4 +1,4 @@
-export { default as Case } from './Case'
+export { default as CaseCard } from './CaseCard'
 export { default as Clients } from './Clients'
 export { default as Footer } from './Footer'
 export { default as Header } from './Header'

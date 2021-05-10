@@ -1,12 +1,12 @@
-import { dept } from 'assets/images'
-import styles from './Navigation.scss'
+import styles from './Navigation.module.css'
 
 const Navigation = () => {
   return (
-    <div style={styles.container}>
-      <img src={dept} alt='Dept logo' />
-      <p>Nav</p>
-    </div>
+    <nav className={styles.nav}>
+      <div className={styles.container}>
+        <img className={styles.logo} src='images/dept-black.png' alt='Dept logo' />
+      </div>
+    </nav>
   )
 }
 

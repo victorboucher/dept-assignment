@@ -1,0 +1,21 @@
+.header {
+  max-width: 90em;
+  height: 60em;
+  margin: 0 auto;
+  background-image: url('/images/header.png');
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: 170%;
+  background-origin: content-box;
+}
+
+.container {
+  max-width: 75em;
+  padding-top: 5em;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 25em;
+}

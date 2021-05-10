@@ -1,0 +1,38 @@
+.card {
+  display: block;
+  height: 40em;
+  width: 36em;
+  margin-bottom: 3em;
+  flex-shrink: 0;
+}
+
+.client {
+  text-transform: uppercase;
+  color: #939393;
+  font-family: maison neue, helvetica neue, arial, sans-serif;
+  font-weight: 700;
+  margin: 1em 0 .5em;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: .5rem;
+}
+
+.view {
+  color: #1A18F7;
+  font-family: maison neue, helvetica neue, arial, sans-serif;
+  font-weight: 700;
+}
+
+.view span {
+  color: #1A18F7;
+  font-size: .75em;
+  margin-right: .5em;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 31.25em;
+}
