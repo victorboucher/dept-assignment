@@ -16,61 +16,61 @@ const work = [
     slug: 'bol',
     client: 'Bol.com',
     title: 'A summer island in the Netherlands',
-    category: '1'
+    category: 'commerce'
   },
   {
     slug: 'kempen',
     client: 'Kempen',
     title: 'Not some average banking website',
-    category: '1'
+    category: 'finance'
   },
   {
     slug: 'philips',
     client: 'Philips',
     title: 'Beatiful design meets innovative technology',
-    category: '1'
+    category: 'technology'
   },
   {
     slug: 'gemeentemuseum',
     client: 'Gemeentemuseum',
     title: 'A 100 years of Mondriaan & De Stijl',
-    category: '1'
+    category: 'culture'
   },
   {
     slug: 'be-lighting',
     client: 'Be Lighting',
     title: 'Delivering clarity on a global scale',
-    category: '1'
+    category: 'technology'
   },
   {
     slug: 'tui',
-    client: 'Tui',
+    client: 'TUI',
     title: 'Swipe to find your next holiday destination',
-    category: '2'
+    category: 'commerce'
   },
   {
     slug: 'chocomel',
     client: 'Chocomel',
     title: 'A campaign for the limited edition letter packs',
-    category: '2'
+    category: 'commerce'
   },
   {
     slug: 'jbl',
     client: 'JBL',
     title: 'Live like a champion with Jerome Booteng',
-    category: '2'
+    category: 'technology'
   },
   {
     slug: 'zalando',
     client: 'Zalando',
     title: 'Innovative SEO and content strategy for Zalando',
-    category: '2'
+    category: 'commerce'
   },
   {
     slug: 'koninklijke-bibliotheek',
     client: 'Koninklijke Bibliotheek',
     title: 'The search for the most influential book ever',
-    category: '2'
+    category: 'culture'
   },
 ]
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { Header, CaseCard, Clients } from 'components'
 import styles from './Work.module.css'
@@ -16,6 +17,9 @@ const Work = ({ works }) => {
 
   return (
     <>
+      <Head>
+        <title>Dept | Work</title>
+      </Head>
       <Header 
         title='Work'
         image='/images/header.png'
@@ -24,10 +28,11 @@ const Work = ({ works }) => {
         <label className={styles.label}>
           Show me
           <select 
+            className={styles.select}
             onChange={(e) => router.push({
               pathname: '/work',
               query: { filter: e.target.value }
-            })}
+            }, undefined, { scroll: false })}
             value={filter && filter}
           >
             <option value='all'>all work</option>

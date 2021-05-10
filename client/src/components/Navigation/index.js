@@ -4,7 +4,7 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <img className={styles.logo} src='images/dept-black.png' alt='Dept logo' />
+        <img className={styles.logo} src='/images/dept-black.png' alt='Dept logo' />
       </div>
     </nav>
   )

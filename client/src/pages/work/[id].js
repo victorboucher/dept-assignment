@@ -1,6 +1,14 @@
+import Head from 'next/head'
+import { Header } from 'components'
+
 const WorkDetail = ({ work }) => {
   return (
-    <p>{work.client}</p>
+    <>
+      <Head>
+        <title>Dept | {work.client}</title>
+      </Head>
+      <p>{work.client}</p>
+    </>
   )
 }
 
