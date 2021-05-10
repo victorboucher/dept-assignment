@@ -37,7 +37,7 @@ const Work = ({ works }) => {
           </select>
         </label>
         <div className={styles.workContainer}>
-          {filteredWorks.map((work, index) => <CaseCard data={work} key={index} />)}
+          {filteredWorks.map((work, index) => <CaseCard {...work} key={index} />)}
         </div>
       </div>
       <Clients />

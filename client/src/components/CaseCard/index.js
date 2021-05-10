@@ -1,16 +1,16 @@
 import Link from 'next/link'
 import styles from './CaseCard.module.css'
 
-const CaseCard = ({ data }) => (
-  <Link href={`/work/${data.slug}`}>
+const CaseCard = ({ slug, client, title }) => (
+  <Link href={`/work/${slug}`}>
     <a className={styles.card}>
-      <img className={styles.image} src='/images/header.png' />
-      <p className={styles.client}>{data.client}</p>
-      <p className={styles.title}>{data.title}</p>
-      <p className={styles.view}>
+      <img className={styles.image} src={`http://localhost:3001/images/${slug}.png`} />
+      <p className={styles.client}>{client}</p>
+      <p className={styles.title}>{title}</p>
+      <span className={styles.view}>
         <span>&#9658;</span> 
-        VIEW CASE
-      </p>
+        <p>VIEW CASE</p>
+      </span>
     </a>
   </Link>
 )

@@ -6,6 +6,14 @@
   flex-shrink: 0;
 }
 
+.card:hover .view p {
+  transform: translateX(.5em);
+}
+
+.card:hover .image {
+  transform: translateY(-.25em);
+}
+
 .client {
   text-transform: uppercase;
   color: #939393;
@@ -19,15 +27,17 @@
   margin-bottom: .5rem;
 }
 
-.view {
+.view p {
+  display: inline-block;
   color: #1A18F7;
   font-family: maison neue, helvetica neue, arial, sans-serif;
   font-weight: 700;
+  transition: transform 150ms ease-in-out;
 }
 
 .view span {
   color: #1A18F7;
-  font-size: .75em;
+  font-size: .8em;
   margin-right: .5em;
 }
 
@@ -35,4 +45,5 @@
   object-fit: cover;
   width: 100%;
   height: 31.25em;
+  transition: transform 150ms ease-in-out;
 }

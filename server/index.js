@@ -9,6 +9,7 @@ app
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
   .use(cors())
+  .use(express.static('public'))
 
 const work = [
   {
