@@ -74,8 +74,31 @@ const work = [
   },
 ]
 
+const clients = [
+  'nivea', 
+  'mona', 
+  'transavia', 
+  'zalando', 
+  'tomtom', 
+  'unilever', 
+  'adidas', 
+  'pathe', 
+  'abn', 
+  'triumph', 
+  'microsoft', 
+  'oxxio', 
+  'nn', 
+  'ziggo', 
+  'walibi', 
+  'klm'
+]
+
 app.get('/work', (req, res) => {
   res.json(work)
+})
+
+app.get('/clients', (req, res) => {
+  res.json(clients)
 })
 
 app.get('/work/:id', (req, res) => {

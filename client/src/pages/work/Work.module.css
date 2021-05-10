@@ -1,5 +1,6 @@
 .container {
-  max-width: 75em;
+  max-width: 77.5em;
+  padding: 0 1.25em;
   margin: 0 auto;  
   display: flex;
   flex-direction: column;
@@ -9,21 +10,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.label {
-  font-size: 2em;
-  color: #A3A3A3;
-  margin: 1em 0 1em auto;
-}
-
-.select {
-  all: unset; 
-  color: #0E0E0E;
-  margin-left: .3em;
-  padding-right: 1.5rem;
-  border-bottom: 1px solid;
-  background: url('https://www.charbase.com/images/glyph/9662') no-repeat right;
-  background-size: 1.5rem;
-  line-height: .9;
+  gap: 2em;
 }

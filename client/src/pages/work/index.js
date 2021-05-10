@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { Header, CaseCard, Clients } from 'components'
+import { Header, CaseCard, Clients, Filter } from 'components'
 import styles from './Work.module.css'
 
-const Work = ({ works }) => {
+const Work = ({ works, clients }) => {
   const router = useRouter()
   const filter = router.query.filter
   const [filteredWorks, setFilteredWorks] = useState(works)
+  const [listView, setListView] = useState(false)
   const categories = [...new Set(works.map(work => work.category))]
 
   useEffect(() => {
@@ -25,43 +26,40 @@ const Work = ({ works }) => {
         image='/images/header.png'
       />
       <div className={styles.container}>
-        <label className={styles.label}>
-          Show me
-          <select 
-            className={styles.select}
-            onChange={(e) => router.push({
-              pathname: '/work',
-              query: { filter: e.target.value }
-            }, undefined, { scroll: false })}
-            value={filter && filter}
-          >
-            <option value='all'>all work</option>
-            {categories.map((category, index) => (
-              <option key={index}>{category}</option>
-            ))}
-          </select>
-        </label>
+        <button 
+          onClick={() => setListView(prevState => !prevState)}
+        >
+          {listView ? 'Grid view' : 'List View'}
+        </button>
+        <Filter 
+          filter={filter}
+          router={router}
+          categories={categories}
+        />
         <div className={styles.workContainer}>
-          {filteredWorks.map((work, index) => <CaseCard {...work} key={index} />)}
+          {filteredWorks.map((work, index) => <CaseCard {...work} listView={listView} key={index} />)}
         </div>
       </div>
-      <Clients />
+      <Clients clients={clients} />
     </>
   )
 }
 
 export const getStaticProps = async () => {
-  const data = await fetch('http://localhost:3001/work')
-  const works = await data.json()
+  const workRes = await fetch('http://localhost:3001/work')
+  const works = await workRes.json()
 
-  if (!works) {
+  const clientsRes = await fetch('http://localhost:3001/clients')
+  const clients = await clientsRes.json()
+
+  if (!works || !clients) {
     return {
       notFound: true
     }
   }
 
   return {
-    props: { works }
+    props: { works, clients }
   }
 }
 
